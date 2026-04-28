@@ -1,22 +1,15 @@
 import { useState } from "react";
 
 const memories = [
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481202824_609035338663981_5143259098846916387_n.jpg", label: "Idealize 2024 Award Ceremony", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481906034_609036478663867_290733307689999923_n.jpg", label: "Participants Working On Their Projects", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481906182_609035345330647_7384667570446697630_n.jpg", label: "Final Presentations To The Judges", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481155173_609035578663957_1752763370933576784_n.jpg", label: "Networking Session With Sponsors", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481989843_609035358663979_4490012234730530804_n.jpg", label: "Idealize 2024 Award Ceremony", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481203754_609036785330503_1015480564810824351_n.jpg", label: "Participants Working On Their Projects", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481019781_609036408663874_7218320586178657030_n.jpg", label: "Workshop Session With Industry Experts", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481211978_609038691996979_3288308582100587783_n.jpg", label: "Final Presentations To The Judges", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481211968_609035471997301_4590511039848640717_n.jpg", label: "Networking Session With Sponsors", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481029395_609036601997188_3489287984406677342_n.jpg", label: "Idealize 2024 Award Ceremony", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481255435_609037368663778_6509686572608877676_n.jpg", label: "Participants Working On Their Projects", year: "2024" },
-  { type: "image", src: "https://idealize.aiesec.lk/showcasting2/481063306_609036838663831_7133449487148157678_n.jpg", label: "Workshop Session With Industry Experts", year: "2024" },
+  { type: "image", src: "/gallery/award-ceremony.jpg", label: "Award Ceremony", year: "2026" },
+  { type: "image", src: "/gallery/awards-ceremony-1.jpg", label: "Awards Ceremony", year: "2026" },
+  { type: "image", src: "/gallery/awards-ceremony-2.jpg", label: "Awards Ceremony", year: "2026" },
+  { type: "image", src: "/gallery/judge-panel.jpg", label: "Judge Panel At Idealize 2026", year: "2026" },
+  { type: "image", src: "/gallery/pesentation.jpg", label: "Participant Presentation", year: "2026" },
+  { type: "image", src: "/gallery/presentation.jpg", label: "Participant Presentation To Judges", year: "2026" },
+  { type: "image", src: "/gallery/networking.jpg", label: "Networking Session With Sponsors", year: "2026" },
 ];
-
-const VIDEO_ID = "LLq2C7A8gfM";
-const PREVIEW_COUNT = 6;
+const VIDEO_ID = "TvztdZQKvxo";
 
 function HudCorners({ accent = "blue" }) {
   const b = accent === "red" ? "border-red-500" : "border-blue-500";
@@ -35,32 +28,6 @@ const Scanlines = () => (
   <div className="absolute inset-0 bg-[repeating-linear-gradient(0deg,transparent,transparent_2px,rgba(0,0,0,0.07)_2px,rgba(0,0,0,0.07)_4px)] pointer-events-none z-10" />
 );
 
-function ImageCard({ src, label, year, onClick }) {
-  return (
-    <div
-      onClick={onClick}
-      className="group relative overflow-hidden bg-slate-900 aspect-[4/3] border border-blue-500/20 hover:border-blue-400/60 transition-all duration-500 cursor-pointer"
-    >
-      <HudCorners />
-      <Scanlines />
-      <img
-        src={src}
-        alt={label}
-        className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
-      />
-      <div className="absolute top-3 right-3 z-20 px-2 py-0.5 bg-blue-500/20 border border-blue-500/40 text-blue-300 text-[9px] font-black tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {year}
-      </div>
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4 z-20">
-        <div>
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-300" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{label}</p>
-          <p className="text-[9px] text-slate-500 uppercase tracking-widest mt-0.5">Click to expand</p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 function VideoCard({ onClick }) {
   return (
     <div
@@ -72,26 +39,23 @@ function VideoCard({ onClick }) {
       <img
         src={`https://img.youtube.com/vi/${VIDEO_ID}/maxresdefault.jpg`}
         alt="IDEALIZE 2024 Aftermovie"
-        className="w-full h-full object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+        className="w-full h-full object-cover opacity-70 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700"
       />
-      {/* Red glow pulse behind play btn */}
       <div className="absolute inset-0 flex items-center justify-center z-20">
         <div className="w-20 h-20 rounded-full bg-red-600/80 border-2 border-red-400 flex items-center justify-center group-hover:scale-125 group-hover:bg-red-500 transition-all duration-300 shadow-[0_0_40px_rgba(239,68,68,0.6)]">
           <span className="material-symbols-outlined text-white text-5xl ml-1">play_arrow</span>
         </div>
       </div>
-      {/* Top badges */}
       <div className="absolute top-3 left-3 z-20 px-2 py-0.5 bg-red-500/20 border border-red-500/40 text-red-300 text-[9px] font-black tracking-widest uppercase">
         Official Aftermovie
       </div>
       <div className="absolute top-3 right-3 z-20 px-2 py-0.5 bg-red-500/20 border border-red-500/40 text-red-300 text-[9px] font-black tracking-widest uppercase">
-        2024
+        2025
       </div>
-      {/* Bottom label */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-transparent to-transparent flex items-end p-5 z-20">
         <div>
           <p className="text-sm font-black uppercase tracking-[0.2em] text-red-300" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            IDEALIZE 2024 — Official Aftermovie
+            IDEALIZE 2025 — Official Aftermovie
           </p>
           <p className="text-[9px] text-slate-400 uppercase tracking-widest mt-1">Click to watch on YouTube player</p>
         </div>
@@ -155,12 +119,17 @@ function Lightbox({ item, onClose, onPrev, onNext, hasPrev, hasNext }) {
 
 export default function Memories() {
   const [activeIdx, setActiveIdx] = useState(null);
-  const [showAll, setShowAll] = useState(false);
+  const [carouselIdx, setCarouselIdx] = useState(0);
 
-  // All items for lightbox: images first, video last
   const allItems = [...memories, { type: "video" }];
 
-  const visibleImages = showAll ? memories : memories.slice(0, PREVIEW_COUNT);
+  const VISIBLE = 3;
+  const maxIdx = memories.length - VISIBLE;
+
+  const prev = () => setCarouselIdx((i) => Math.max(0, i - 1));
+  const next = () => setCarouselIdx((i) => Math.min(maxIdx, i + 1));
+
+  const visibleMemories = memories.slice(carouselIdx, carouselIdx + VISIBLE);
 
   return (
     <section className="py-24 px-6 bg-slate-900/50 min-h-screen flex flex-col justify-center relative overflow-hidden" id="memories">
@@ -170,51 +139,91 @@ export default function Memories() {
 
         {/* Header */}
         <div className="mb-14 flex flex-col items-center text-center">
-
           <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
             Memories &amp; <span className="text-blue-500">Gallery</span>
           </h2>
           <div className="h-px w-24 bg-gradient-to-r from-blue-600 to-blue-300 mt-5" />
-
         </div>
 
-        {/* ── Aftermovie — always visible at top ── */}
-        <div className="mb-4">
+        {/* Aftermovie */}
+        <div className="mb-6">
           <VideoCard onClick={() => setActiveIdx(memories.length)} />
         </div>
 
-        {/* ── Featured asymmetric row ── */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mb-4">
-          <div className="md:col-span-7">
-            <ImageCard {...memories[0]} onClick={() => setActiveIdx(0)} />
+        {/* Carousel */}
+        <div className="relative">
+          <button
+            onClick={prev}
+            disabled={carouselIdx === 0}
+            className="absolute -left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 border border-blue-500/40 text-blue-400 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all disabled:opacity-20 disabled:cursor-not-allowed bg-slate-900"
+          >
+            <span className="material-symbols-outlined">chevron_left</span>
+          </button>
+
+          <div className="overflow-hidden">
+            <div
+              className="flex transition-transform duration-500 ease-in-out gap-4"
+              style={{ transform: `translateX(calc(-${carouselIdx * (100 / VISIBLE)}% - ${carouselIdx * (16 / VISIBLE)}px))` }}
+            >
+              {memories.map((item, i) => (
+                <div
+                  key={i}
+                  onClick={() => setActiveIdx(i)}
+                  className="group relative overflow-hidden bg-slate-900 border border-blue-500/20 hover:border-blue-400/60 transition-all duration-500 cursor-pointer flex-shrink-0"
+                  style={{ width: `calc(${100 / VISIBLE}% - ${(16 * (VISIBLE - 1)) / VISIBLE}px)` }}
+                >
+                  <HudCorners />
+                  <Scanlines />
+                  <div className="aspect-[4/3]">
+                    <img
+                      src={item.src}
+                      alt={item.label}
+                      className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                    />
+                  </div>
+                  <div className="absolute top-3 right-3 z-20 px-2 py-0.5 bg-blue-500/20 border border-blue-500/40 text-blue-300 text-[9px] font-black tracking-widest uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {item.year}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4 z-20">
+                    <div>
+                      <p className="text-[10px] font-black uppercase tracking-[0.2em] text-blue-300" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{item.label}</p>
+                      <p className="text-[9px] text-slate-500 uppercase tracking-widest mt-0.5">Click to expand</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className="md:col-span-5 grid grid-rows-2 gap-4">
-            <ImageCard {...memories[1]} onClick={() => setActiveIdx(1)} />
-            <ImageCard {...memories[2]} onClick={() => setActiveIdx(2)} />
-          </div>
+
+          <button
+            onClick={next}
+            disabled={carouselIdx >= maxIdx}
+            className="absolute -right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 border border-blue-500/40 text-blue-400 flex items-center justify-center hover:bg-blue-500 hover:text-white transition-all disabled:opacity-20 disabled:cursor-not-allowed bg-slate-900"
+          >
+            <span className="material-symbols-outlined">chevron_right</span>
+          </button>
         </div>
 
-        {/* ── Uniform grid for rest ── */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {visibleImages.slice(3).map((item, i) => (
-            <ImageCard key={i} {...item} onClick={() => setActiveIdx(i + 3)} />
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-2 mt-6">
+          {Array.from({ length: maxIdx + 1 }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCarouselIdx(i)}
+              className={`transition-all duration-300 ${
+                i === carouselIdx
+                  ? "w-6 h-1.5 bg-blue-500"
+                  : "w-1.5 h-1.5 bg-slate-600 hover:bg-slate-400"
+              }`}
+            />
           ))}
         </div>
 
-        {/* ── View more / less ── */}
-        {memories.length > PREVIEW_COUNT && (
-          <div className="mt-8 text-center">
-            <button
-              onClick={() => setShowAll((v) => !v)}
-              className="group inline-flex items-center gap-3 px-10 py-4 border border-blue-500/40 text-blue-400 hover:border-blue-400 hover:bg-blue-500/10 font-black uppercase tracking-widest transition-all text-xs"
-              style={{ fontFamily: "'Space Grotesk', sans-serif" }}
-            >
-              <span className="material-symbols-outlined text-base">{showAll ? "expand_less" : "expand_more"}</span>
-              {showAll ? "Show Less" : `See More Photos (${memories.length - PREVIEW_COUNT} remaining)`}
-              <span className="material-symbols-outlined text-base">{showAll ? "expand_less" : "expand_more"}</span>
-            </button>
-          </div>
-        )}
+        <div className="text-center mt-3">
+          <span className="text-[9px] uppercase tracking-widest text-slate-600 font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            {carouselIdx + 1} — {maxIdx + 1}
+          </span>
+        </div>
       </div>
 
       <Lightbox

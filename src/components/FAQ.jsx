@@ -1,4 +1,5 @@
 import { useState } from "react";
+import WalkingSpider from "./spiderwalk";
 
 const faqs = [
   {
@@ -56,6 +57,7 @@ export default function FAQ() {
 
   return (
     <section className="py-32 relative" id="faq">
+      
       <div className="max-w-[800px] mx-auto px-6">
         <div className="flex items-center gap-4 mb-16 border-b border-slate-800 pb-4">
           <div className="w-3 h-3 bg-primary animate-pulse"></div>
@@ -88,7 +90,10 @@ export default function FAQ() {
             </div>
           ))}
         </div>
-        
+<div className="mt-16">
+  <WalkingSpider count={1} size={100} speeds={[0.05]} />
+</div>
+
       </div>
     </section>
   );

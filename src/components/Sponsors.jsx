@@ -1,44 +1,92 @@
 const tiers = [
   {
-    label: "Gold Partners",
-    color: "text-yellow-400",
-    borderColor: "border-yellow-500/40 hover:border-yellow-500",
-    glowColor: "hover:shadow-[0_0_20px_rgba(234,179,8,0.2)]",
-    badge: "bg-yellow-500/10 text-yellow-400 border-yellow-500/30",
-    cols: "grid-cols-2",
-    size: "aspect-[3/2]",
+    label: "Gold Partner",
+    cols: "grid-cols-1",
+    wrapClass: "max-w-[400px] mx-auto py-8 px-10",
+    imgClass: "w-full h-auto object-contain",
+    box: false,
     sponsors: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD4xgDt05Irg7pB9syFRVqS1ojRtkpHA45rW0pYcOaTnj3gm5WRQLKmIQKKQXVg2W6r8pBLu8vYsPEJlJBHgBE15CSmht5kaIoj5QiSoRG_LzIaztvdZZA8dADdKskiFzErZuZcNAa7QJn2okFqWHXrSN9j0TbiZSAOiIidLyrRYdZoZL9PmGJLcRf-u5e4D8XUVR11JroVqONJFURivEPqfnSEjeM4I0p73iVPc7G5IZN8eKNdZZ3vbROjEjoavKShTmQzobJ73kEl", name: "Partner A" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAk40Bn3yOwAoQ35dMYDedEPvFF0pCrmdHZAGm0QBfoAcuHShQ3cxPCWoHquwb-Y8KDKgPYbtU-xQyRo4tf7IyqnMfxb-JwOF0MZvEaU5-m5umskvLyZxsTx89lvXEg8JvxfzLpw0bE7stnTtxaNMUHQBdXv_zHsePHQh9rv4ihgTRYzIVqeY32fidhY2jCmq-zWf2mfd-kozo84tkbO3LC8j6hUKi43ZHdUNaiNntsJJ3cUteWQxbbKyUWNuE9ggNXZYU4xZfDdPa2", name: "Partner B" },
+      { src: "/partnership-logos/creative-software.png", name: "Creative Software" },
+    ],
+  },
+  {
+    label: "Venue Partner",
+    cols: "grid-cols-1",
+    wrapClass: "max-w-[400px] mx-auto py-8 px-10",
+    imgClass: "w-full h-auto object-contain",
+    box: false,
+    sponsors: [
+      { src: "/partnership-logos/virtusa.png", name: "Virtusa" },
     ],
   },
   {
     label: "Silver Partners",
-    color: "text-slate-300",
-    borderColor: "border-slate-400/40 hover:border-slate-300",
-    glowColor: "hover:shadow-[0_0_20px_rgba(148,163,184,0.15)]",
-    badge: "bg-slate-400/10 text-slate-300 border-slate-400/30",
-    cols: "grid-cols-3",
-    size: "aspect-[3/2]",
+    cols: "grid-cols-2",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
     sponsors: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvx71U1nWNSKf3NFt7KmPkiu1N4xYLcneE2MywIdbiShmvGruv9aSX-SyDy_OKT2vXdfFT1kcUPzbGzYyQYDBjJlQU7PdZBjoFV4K5Ui8mNrBPCzsOsfaEZh3pgfi1VuddsX0okG0BJA6CMmWVtk2EdlV9XSSSOiBiJcYv1BrAI6uEOPLEpFZ8xIrMkQ9sTqXvNKNaw1t0_RZ_xzOkodSXCXJtv8DBL_o3oRXlpOsjiVQHC344xKfVIjciVj31a0FFWs5OabL3RwHV", name: "Partner C" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBqMEIyOrZh8Glw9ibpmNleRg5PjPoNXtL6TBRRWbitRjmGY7miHgK9uobNSkSTEjVpwtc6H7Vn-ENs24VEpzRj6ou6YYBsyz-Yh00e8LltEm3iuRdoJxPLTjH53UzSY90HfVvnQnEtfmqHG9c6yEgas5ZBGTAYiyrVB4YExQTsd4Da7NU8Y_bv1cQLrNfVrwxBpeKe5A6Z7jfpEsW-DkhgEG9BXW36bHJcLPii97LLVEwyHlpAtoVJbE9M-AHnwLqOqHTxeMBfaWz", name: "Partner D" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD4xgDt05Irg7pB9syFRVqS1ojRtkpHA45rW0pYcOaTnj3gm5WRQLKmIQKKQXVg2W6r8pBLu8vYsPEJlJBHgBE15CSmht5kaIoj5QiSoRG_LzIaztvdZZA8dADdKskiFzErZuZcNAa7QJn2okFqWHXrSN9j0TbiZSAOiIidLyrRYdZoZL9PmGJLcRf-u5e4D8XUVR11JroVqONJFURivEPqfnSEjeM4I0p73iVPc7G5IZN8eKNdZZ3vbROjEjoavKShTmQzobJ73kEl", name: "Partner E" },
+      { src: "/partnership-logos/advania.jpg",            name: "Advania" },
+      { src: "/partnership-logos/asiri-construction.png", name: "Asiri Construction" },
     ],
   },
   {
-    label: "Bronze Partners",
-    color: "text-orange-400",
-    borderColor: "border-orange-500/30 hover:border-orange-400",
-    glowColor: "hover:shadow-[0_0_20px_rgba(249,115,22,0.1)]",
-    badge: "bg-orange-500/10 text-orange-400 border-orange-500/30",
-    cols: "grid-cols-4",
-    size: "aspect-[3/2]",
+    label: "Outreach Partner",
+    cols: "grid-cols-1",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
     sponsors: [
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAk40Bn3yOwAoQ35dMYDedEPvFF0pCrmdHZAGm0QBfoAcuHShQ3cxPCWoHquwb-Y8KDKgPYbtU-xQyRo4tf7IyqnMfxb-JwOF0MZvEaU5-m5umskvLyZxsTx89lvXEg8JvxfzLpw0bE7stnTtxaNMUHQBdXv_zHsePHQh9rv4ihgTRYzIVqeY32fidhY2jCmq-zWf2mfd-kozo84tkbO3LC8j6hUKi43ZHdUNaiNntsJJ3cUteWQxbbKyUWNuE9ggNXZYU4xZfDdPa2", name: "Partner F" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuDvx71U1nWNSKf3NFt7KmPkiu1N4xYLcneE2MywIdbiShmvGruv9aSX-SyDy_OKT2vXdfFT1kcUPzbGzYyQYDBjJlQU7PdZBjoFV4K5Ui8mNrBPCzsOsfaEZh3pgfi1VuddsX0okG0BJA6CMmWVtk2EdlV9XSSSOiBiJcYv1BrAI6uEOPLEpFZ8xIrMkQ9sTqXvNKNaw1t0_RZ_xzOkodSXCXJtv8DBL_o3oRXlpOsjiVQHC344xKfVIjciVj31a0FFWs5OabL3RwHV", name: "Partner G" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBqMEIyOrZh8Glw9ibpmNleRg5PjPoNXtL6TBRRWbitRjmGY7miHgK9uobNSkSTEjVpwtc6H7Vn-ENs24VEpzRj6ou6YYBsyz-Yh00e8LltEm3iuRdoJxPLTjH53UzSY90HfVvnQnEtfmqHG9c6yEgas5ZBGTAYiyrVB4YExQTsd4Da7NU8Y_bv1cQLrNfVrwxBpeKe5A6Z7jfpEsW-DkhgEG9BXW36bHJcLPii97LLVEwyHlpAtoVJbE9M-AHnwLqOqHTxeMBfaWz", name: "Partner H" },
-      { src: "https://lh3.googleusercontent.com/aida-public/AB6AXuD4xgDt05Irg7pB9syFRVqS1ojRtkpHA45rW0pYcOaTnj3gm5WRQLKmIQKKQXVg2W6r8pBLu8vYsPEJlJBHgBE15CSmht5kaIoj5QiSoRG_LzIaztvdZZA8dADdKskiFzErZuZcNAa7QJn2okFqWHXrSN9j0TbiZSAOiIidLyrRYdZoZL9PmGJLcRf-u5e4D8XUVR11JroVqONJFURivEPqfnSEjeM4I0p73iVPc7G5IZN8eKNdZZ3vbROjEjoavKShTmQzobJ73kEl", name: "Partner I" },
+      { src: "/partnership-logos/dsc.png", name: "DSC" },
+    ],
+  },
+  {
+    label: "Banner Partners",
+    cols: "grid-cols-2",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/antyra-solutions.png", name: "Antyra Solutions" },
+      { src: "/partnership-logos/expo-airline.jpg",     name: "Expo Airline" },
+    ],
+  },
+  {
+    label: "Technology Partners",
+    cols: "grid-cols-2",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/guardian-solutions.jpg", name: "Guardian Solutions" },
+      { src: "/partnership-logos/red-line.jpg",           name: "Red Line" },
+    ],
+  },
+  {
+    label: "Session Partner",
+    cols: "grid-cols-1",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/bistec.jpg", name: "Bistec Global" },
+    ],
+  },
+  {
+    label: "Other Partners",
+    cols: "grid-cols-4",
+    wrapClass: "py-4 px-4",
+    imgClass: "w-full h-auto object-contain",
+    box: false,
+    sponsors: [
+      { src: "/partnership-logos/pearl-bay.png",      name: "Pearl Bay" },
+      { src: "/partnership-logos/booktainer-co.jpg",  name: "Booktainer Co" },
+      { src: "/partnership-logos/iconic-bags.jpg",    name: "Iconic Bags" },
+      { src: "/partnership-logos/photographer.png",   name: "Photographer" },
+      { src: "/partnership-logos/chokolaate.png",     name: "Chokolaate" },
+      { src: "/partnership-logos/colombo-times.jpg",  name: "Colombo Times" },
+      { src: "/partnership-logos/daily-mirror.jpg",   name: "Daily Mirror" },
+      { src: "/partnership-logos/pr-wire.png",        name: "PR Wire" },
+      { src: "/partnership-logos/sunday-times.jpg",   name: "The Sunday Times" },
+      { src: "/partnership-logos/uni-today.png",      name: "UNI Today" },
+      { src: "/partnership-logos/good-pr.png",        name: "Good PR" },
+      { src: "/partnership-logos/hacksl.png",         name: "HackSL" },
+      { src: "/partnership-logos/mora-lenz.png",      name: "Mora Lenz" },
     ],
   },
 ];
@@ -48,55 +96,65 @@ export default function Sponsors() {
     <section className="py-32 relative" id="partners">
       <div className="max-w-[1200px] mx-auto px-6">
 
-        {/* Header */}
-        <div className="mb-12 flex flex-col items-center text-center">
-  <p className="text-xs font-bold uppercase tracking-[0.3em] text-blue-400 mb-3"
-    style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-    
-  </p>
-  <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase"
-    style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-    Multiverse <span className="text-blue-500">Partners</span>
-  </h2>
-  <div className="h-px w-24 bg-gradient-to-r from-blue-600 to-blue-300 mt-5"></div>
-</div>
+        <div className="mb-4 flex flex-col items-center text-center">
+          <h2
+            className="text-4xl md:text-5xl font-black tracking-tighter uppercase"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            Past <span className="text-blue-500">Partners</span>
+          </h2>
+          <p
+            className="text-slate-500 text-sm uppercase tracking-widest mt-3 font-bold"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            Idealize 2025
+          </p>
+          <div className="h-px w-24 bg-gradient-to-r from-blue-600 to-blue-300 mt-5" />
+        </div>
 
-        {/* Tiers */}
-        <div className="space-y-16">
+        <div className="space-y-12 mt-12">
           {tiers.map((tier) => (
             <div key={tier.label}>
-              {/* Tier label */}
-              <div className="flex items-center gap-4 mb-8">
-                <span className={`text-[10px] font-black uppercase tracking-[0.3em] px-3 py-1 border ${tier.badge} rounded-full`}
-                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+              <div className="flex items-center gap-4 mb-7">
+                <span
+                  className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 whitespace-nowrap"
+                  style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                >
                   {tier.label}
                 </span>
-                <div className="flex-1 h-px bg-gradient-to-r from-slate-700 to-transparent"></div>
+                <div className="flex-1 h-px bg-gradient-to-r from-slate-700 to-transparent" />
               </div>
 
-              {/* Sponsor logos */}
-              <div className={`grid ${tier.cols} gap-6`}>
+              <div className={`grid ${tier.cols} gap-6 items-center justify-items-center`}>
                 {tier.sponsors.map(({ src, name }) => (
-                  <div key={name}
-                    className={`${tier.size} bg-surface flex items-center justify-center
-                      grayscale opacity-50 hover:grayscale-0 hover:opacity-100
-                      transition-all duration-300 cursor-pointer p-6
-                      border ${tier.borderColor} ${tier.glowColor}`}>
-                    <img className="max-h-full object-contain" src={src} alt={name} />
-                  </div>
+                  tier.box ? (
+                    <div
+                      key={name}
+                      className="bg-white p-4 rounded-lg shadow-sm border border-gray-100 flex items-center justify-center hover:shadow-md transition-shadow duration-300 w-full max-w-[250px]"
+                    >
+                      <img className={tier.imgClass} src={src} alt={name} />
+                    </div>
+                  ) : (
+                    <div
+                      key={name}
+                      className={`flex items-center justify-center ${tier.wrapClass}`}
+                    >
+                      <img className={tier.imgClass} src={src} alt={name} />
+                    </div>
+                  )
                 ))}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Become a sponsor */}
-        <div className="mt-20 text-center">
-          <a className="inline-flex items-center gap-2 text-slate-500 hover:text-primary font-bold uppercase tracking-widest text-sm transition-colors"
-            href="#" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
-            Become a Sponsor
-            <span className="material-symbols-outlined text-sm">arrow_forward</span>
-          </a>
+        <div className="mt-20 text-center border-t border-slate-800 pt-10">
+          <p
+            className="text-[10px] uppercase tracking-[0.3em] text-slate-600 font-bold"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            These organizations proudly supported Idealize 2025
+          </p>
         </div>
 
       </div>

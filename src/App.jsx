@@ -145,7 +145,7 @@ export default function App() {
               I kept both as requested but they share the same ID. */}
           <section className="snap-section min-h-screen" ref={registerRef("partners")}>
             <Sponsors />
-            <ScrollArrow onClick={() => scrollToNext("partners")} />
+            <ScrollArrow onClick={() => scrollToNext("timeline")} />
           </section>
 
           <section className="snap-section-faq min-h-screen flex flex-col" ref={registerRef("faq")}>

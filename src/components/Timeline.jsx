@@ -1,8 +1,8 @@
 const events = [
   {
     title: "Registration Opens",
-    desc: "Secure your spot in the multiverse. Limited entry.",
-    date: "APRIL 27-MAY 11, 2026",
+    desc: "Your journey starts here. Enter the multiverse.",
+    date: "APRIL 27 - MAY 11",
     color: "text-white",
     dotColor: "bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)]",
     borderColor: "border-white/20",
@@ -11,8 +11,8 @@ const events = [
   },
   {
     title: "Workshop Starts",
-    desc: "Master the tools of the trade with industry leaders.",
-    date: "APRIL 4 , 2026",
+    desc: "Sharpen your tools. Learn from the best.",
+    date: "MAY 4 ",
     color: "text-white",
     dotColor: "bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)]",
     borderColor: "border-white/20",
@@ -20,9 +20,9 @@ const events = [
     dotSize: "w-4 h-4",
   },
   {
-    title: "Proposal submission",
-    desc: "48 hours of pure creation. Glitch the multiverse.",
-    date: "MAY 12-JUNE 6, 2026",
+    title: "Proposal Submission",
+    desc: "Sketch the blueprint. Design your innovation.",
+    date: "MAY 12 - JUNE 6",
     color: "text-white",
     dotColor: "bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)]",
     borderColor: "border-white/20",
@@ -31,28 +31,28 @@ const events = [
   },
   {
     title: "Mini Competition",
-    desc: "Demo day and awards ceremony at the Nexus Stage.",
-    date: "26 MAY-10 JUNE",
+    desc: "The first spark. Validate your vision.",
+    date: "26 MAY - 10 JUNE",
     color: "text-white",
     dotColor: "bg-white shadow-[0_0_15px_rgba(255,255,255,0.5)]",
     borderColor: "border-white/20",
     align: "left",
     dotSize: "w-6 h-6",
   },
-    {
+  {
     title: "SEMI FINALS",
-    desc: "Demo day and awards ceremony at the Nexus Stage.",
-    date: "JULY 6, ",
+    desc: "The path narrows. Prove your craft.",
+    date: "JULY 6 ",
     color: "text-secondary",
     dotColor: "bg-secondary",
     borderColor: "border-secondary/20",
     align: "right",
     dotSize: "w-6 h-6",
   },
-      {
+  {
     title: "FINALS",
-    desc: "Demo day and awards ceremony at the Nexus Stage.",
-    date: "JULY 20, ",
+    desc: "The Grand Nexus. Claim your place.",
+    date: "JULY 20 ",
     color: "text-primary",
     dotColor: "bg-primary",
     borderColor: "border-primary/20",
@@ -60,7 +60,6 @@ const events = [
     dotSize: "w-7 h-7",
   },
 ];
-
 export default function Timeline() {
   return (
     <section className="py-32 bg-slate-900/50 relative overflow-hidden" id="timeline">

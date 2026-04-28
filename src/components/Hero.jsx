@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import background from "../assets/hero_back.svg";
-import logo from "../assets/withname.png"; // <-- update this path to your actual logo file
+import logo from "../assets/withname.png"; 
+
 export default function Hero() {
   const canvasRef = useRef(null);
 
@@ -22,12 +23,9 @@ export default function Hero() {
     const FONT_SIZE = 25;
     const CHARS = ["0", "1"];
 
-    // Theme colors pulled from your scheme
-    // primary ~ indigo/blue, secondary ~ violet
-    // We'll use a cool blue-purple tint to match
-    const COLOR_HEAD = "#a5b4fc"; // indigo-300 — bright head drop
-    const COLOR_MID = "#4d60bd"; // primary — mid trail
-    const COLOR_TAIL = "#1e1b4b"; // indigo-950 — deep tail fade
+    const COLOR_HEAD = "#a5b4fc"; 
+    const COLOR_MID = "#4d60bd"; 
+    const COLOR_TAIL = "#1e1b4b"; 
 
     const resize = () => {
       canvas.width = canvas.offsetWidth;
@@ -37,28 +35,18 @@ export default function Hero() {
     resize();
     window.addEventListener("resize", resize);
 
-    // columns
     let cols = Math.floor(canvas.width / FONT_SIZE);
-    let drops = Array.from({ length: cols }, () =>
-      Math.floor(Math.random() * -50)   // start above canvas
-    );
-
-    // speed: each drop has its own interval counter
-    let speeds = Array.from({ length: cols }, () =>
-      0.2 + Math.random() * 0.115         // fraction of frame — < 1 = slower
-    );
+    let drops = Array.from({ length: cols }, () => Math.floor(Math.random() * -50));
+    let speeds = Array.from({ length: cols }, () => 0.2 + Math.random() * 0.115);
     let counters = Array.from({ length: cols }, () => 0);
 
     const draw = () => {
-      // Fade trail — semi-transparent fill instead of clearRect
-      ctx.fillStyle = "rgba(2, 6, 23, 0.18)"; // slate-950 @ low alpha
+      ctx.fillStyle = "rgba(2, 6, 23, 0.18)"; 
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-
       ctx.font = `bold ${FONT_SIZE}px 'Courier New', monospace`;
 
       cols = Math.floor(canvas.width / FONT_SIZE);
 
-      // Adjust arrays if cols changed (resize)
       while (drops.length < cols) {
         drops.push(Math.floor(Math.random() * -50));
         speeds.push(0.3 + Math.random() * 0.5);
@@ -72,20 +60,17 @@ export default function Hero() {
 
         const x = i * FONT_SIZE;
         const y = drops[i] * FONT_SIZE;
-
-        // Draw several characters of the trail
         const TRAIL = 20;
+
         for (let t = 0; t < TRAIL; t++) {
           const ty = (drops[i] - t) * FONT_SIZE;
           if (ty < 0) continue;
 
           let alpha, color;
           if (t === 0) {
-            // Bright head
             color = COLOR_HEAD;
             alpha = 1;
           } else {
-            // Fade from mid to tail
             const ratio = t / TRAIL;
             alpha = Math.max(0, 1 - ratio) * 0.85;
             color = t < TRAIL * 0.4 ? COLOR_MID : COLOR_TAIL;
@@ -98,19 +83,15 @@ export default function Hero() {
         }
 
         ctx.globalAlpha = 1;
-
-        // Reset drop when it goes off screen
         if (y > canvas.height && Math.random() > 0.975) {
           drops[i] = 0;
         }
         drops[i]++;
       }
-
       animationId = requestAnimationFrame(draw);
     };
 
     if (prefersReducedMotion) {
-      // Render a static background frame for users who prefer reduced motion.
       ctx.fillStyle = "rgba(2, 6, 23, 0.25)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
     } else {
@@ -125,7 +106,6 @@ export default function Hero() {
 
   return (
     <section className="relative h-screen overflow-hidden">
-
       {/* ── Background Layer ── */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-[#1e1b4b] to-slate-950" />
@@ -135,7 +115,7 @@ export default function Hero() {
         <img
           className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-screen"
           src={background}
-          alt="vibrant neon glitch aesthetic background"
+          alt="background"
         />
       </div>
 
@@ -146,18 +126,12 @@ export default function Hero() {
         style={{ mixBlendMode: "screen", opacity: 0.55 }}
       />
 
-      {/* ── Bottom fade to hide canvas edge ── */}
       <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-slate-950 to-transparent z-[2]" />
 
       {/* ── Hero Content ── */}
-      <div className="relative z-10 w-full h-full px-4 md:px-6 text-center flex flex-col items-center justify-center pt-16 md:pt-20 -translate-y-20 md:-translate-y-28">
-
-        {/* Pill badge */}
-        <div className="inline-block px-4 py-1 mb-3 border border-primary/40 bg-primary/10 text-primary font-headline font-bold uppercase tracking-[0.3em] text-xs md:text-sm skew-x-[-12deg] animate-pulse">
-          Multiverse is Colliding
-        </div>
-
-        {/* Logo - Main Visual */}
+      <div className="relative z-10 w-full h-full px-4 md:px-6 text-center flex flex-col items-center justify-center pt-16 md:pt-20 -translate-y-16 md:-translate-y-24">
+        
+        {/* Logo - Main Visual (Pill badge was removed from here) */}
         <div className="flex items-center justify-center -mb-20 md:-mb-24">
           <img
             src={logo}
@@ -188,7 +162,6 @@ export default function Hero() {
           </button>
         </div>
       </div>
-
     </section>
   );
 }
