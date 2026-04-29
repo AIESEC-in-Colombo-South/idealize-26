@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import background from "../assets/hero_back.svg";
-import logo from "../assets/withname.png"; 
+import logo from "../assets/withname.png";
 
 export default function Hero() {
   const canvasRef = useRef(null);
@@ -23,9 +23,9 @@ export default function Hero() {
     const FONT_SIZE = 25;
     const CHARS = ["0", "1"];
 
-    const COLOR_HEAD = "#a5b4fc"; 
-    const COLOR_MID = "#4d60bd"; 
-    const COLOR_TAIL = "#1e1b4b"; 
+    const COLOR_HEAD = "#a5b4fc";
+    const COLOR_MID = "#4d60bd";
+    const COLOR_TAIL = "#1e1b4b";
 
     const resize = () => {
       canvas.width = canvas.offsetWidth;
@@ -41,7 +41,7 @@ export default function Hero() {
     let counters = Array.from({ length: cols }, () => 0);
 
     const draw = () => {
-      ctx.fillStyle = "rgba(2, 6, 23, 0.18)"; 
+      ctx.fillStyle = "rgba(2, 6, 23, 0.18)";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
       ctx.font = `bold ${FONT_SIZE}px 'Courier New', monospace`;
 
@@ -132,7 +132,7 @@ export default function Hero() {
 
       {/* ── Hero Content ── */}
       <div className="relative z-10 w-full h-full px-4 md:px-6 text-center flex flex-col items-center justify-center pt-16 md:pt-20 -translate-y-16 md:-translate-y-24">
-        
+
         {/* Logo - Main Visual (Pill badge was removed from here) */}
         <div className="flex items-center justify-center -mb-20 md:-mb-24">
           <img
