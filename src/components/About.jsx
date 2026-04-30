@@ -2,7 +2,7 @@ import logo from "../assets/idealizelogo.svg";
 import HangingSpider from "./hanging";
 
 //dele book link
-const DELEGATE_BOOKLET_LINK = "click.aiesec.lk/cs/idealize-2026-delegate-booklet";
+const DELEGATE_BOOKLET_LINK = "https://click.aiesec.lk/cs/idealize-2026-delegate-booklet";
 
 const tracks = [
   {
