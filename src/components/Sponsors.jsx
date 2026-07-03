@@ -1,92 +1,88 @@
 const tiers = [
   {
-    label: "Gold Partner",
+    label: "Premium Technology Partner",
     cols: "grid-cols-1",
     wrapClass: "max-w-[400px] mx-auto py-8 px-10",
     imgClass: "w-full h-auto object-contain",
     box: false,
     sponsors: [
-      { src: "/partnership-logos/creative-software.png", name: "Creative Software" },
+      { src: "/partnership-logos/agent-kernal.png", name: "Agent Kernal" },
     ],
   },
-  {
-    label: "Venue Partner",
+    {
+    label: "Official Education Partner",
     cols: "grid-cols-1",
     wrapClass: "max-w-[400px] mx-auto py-8 px-10",
     imgClass: "w-full h-auto object-contain",
     box: false,
     sponsors: [
-      { src: "/partnership-logos/virtusa.png", name: "Virtusa" },
+      { src: "/partnership-logos/cima.jpeg", name: "CIMA" },
     ],
   },
   {
-    label: "Silver Partners",
-    cols: "grid-cols-2",
-    imgClass: "max-w-full h-auto object-contain",
-    box: true,
-    sponsors: [
-      { src: "/partnership-logos/advania.jpg",            name: "Advania" },
-      { src: "/partnership-logos/asiri-construction.png", name: "Asiri Construction" },
-    ],
-  },
-  {
-    label: "Outreach Partner",
+    label: "Knowledge & Innovation Partner",
     cols: "grid-cols-1",
-    imgClass: "max-w-full h-auto object-contain",
-    box: true,
-    sponsors: [
-      { src: "/partnership-logos/dsc.png", name: "DSC" },
-    ],
-  },
-  {
-    label: "Banner Partners",
-    cols: "grid-cols-2",
-    imgClass: "max-w-full h-auto object-contain",
-    box: true,
-    sponsors: [
-      { src: "/partnership-logos/antyra-solutions.png", name: "Antyra Solutions" },
-      { src: "/partnership-logos/expo-airline.jpg",     name: "Expo Airline" },
-    ],
-  },
-  {
-    label: "Technology Partners",
-    cols: "grid-cols-2",
-    imgClass: "max-w-full h-auto object-contain",
-    box: true,
-    sponsors: [
-      { src: "/partnership-logos/guardian-solutions.jpg", name: "Guardian Solutions" },
-      { src: "/partnership-logos/red-line.jpg",           name: "Red Line" },
-    ],
-  },
-  {
-    label: "Session Partner",
-    cols: "grid-cols-1",
-    imgClass: "max-w-full h-auto object-contain",
-    box: true,
-    sponsors: [
-      { src: "/partnership-logos/bistec.jpg", name: "Bistec Global" },
-    ],
-  },
-  {
-    label: "Other Partners",
-    cols: "grid-cols-4",
-    wrapClass: "py-4 px-4",
+    wrapClass: "max-w-[400px] mx-auto py-8 px-10",
     imgClass: "w-full h-auto object-contain",
     box: false,
     sponsors: [
-      { src: "/partnership-logos/pearl-bay.png",      name: "Pearl Bay" },
-      { src: "/partnership-logos/booktainer-co.jpg",  name: "Booktainer Co" },
-      { src: "/partnership-logos/iconic-bags.jpg",    name: "Iconic Bags" },
-      { src: "/partnership-logos/photographer.png",   name: "Photographer" },
-      { src: "/partnership-logos/chokolaate.png",     name: "Chokolaate" },
-      { src: "/partnership-logos/colombo-times.jpg",  name: "Colombo Times" },
-      { src: "/partnership-logos/daily-mirror.jpg",   name: "Daily Mirror" },
-      { src: "/partnership-logos/pr-wire.png",        name: "PR Wire" },
-      { src: "/partnership-logos/sunday-times.jpg",   name: "The Sunday Times" },
-      { src: "/partnership-logos/uni-today.png",      name: "UNI Today" },
-      { src: "/partnership-logos/good-pr.png",        name: "Good PR" },
-      { src: "/partnership-logos/hacksl.png",         name: "HackSL" },
-      { src: "/partnership-logos/mora-lenz.png",      name: "Mora Lenz" },
+      { src: "/partnership-logos/slasscom.png", name: "Slasscom" },
+    ],
+  },
+  {
+    label: "Industry Ecosystem Partner",
+    cols: "grid-cols-1",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/trace-expert-city.png", name: "TRACE Expert City" },
+    ],
+  },
+  {
+    label: "Digital Engagement Partner",
+    cols: "grid-cols-1",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/ahaslides.png", name: "Ahaslides" },
+    ],
+  },
+  {
+    label: "Official PR Partner",
+    cols: "grid-cols-1",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/pr-wire.png", name: "PRwire" },
+    ],
+  },
+   {
+    label: "Official Digital Photography Partner",
+    cols: "grid-cols-1",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/nysm.jpg", name: "NowYouSeeMe" },
+    ],
+  },
+  {
+    label: "Official School Networking Partner",
+    cols: "grid-cols-1",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/royal-college-cs.png", name: "The Royal College Computer Society" },
+    ],
+  },
+  {
+    label: "Digital Media Partners",
+    cols: "grid-cols-3",
+    imgClass: "max-w-full h-auto object-contain",
+    box: true,
+    sponsors: [
+      { src: "/partnership-logos/hacksl.png",    name: "Hack SL" },
+      { src: "/partnership-logos/good-pr.png",   name: "Good PR" },
+      { src: "/partnership-logos/uni-today.png", name: "UNI Today" },
     ],
   },
 ];
@@ -101,13 +97,13 @@ export default function Sponsors() {
             className="text-4xl md:text-5xl font-black tracking-tighter uppercase"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            Past <span className="text-blue-500">Partners</span>
+            Our <span className="text-blue-500">Partners</span>
           </h2>
           <p
             className="text-slate-500 text-sm uppercase tracking-widest mt-3 font-bold"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            Idealize 2025
+            Idealize 2026
           </p>
           <div className="h-px w-24 bg-gradient-to-r from-blue-600 to-blue-300 mt-5" />
         </div>
@@ -117,12 +113,12 @@ export default function Sponsors() {
             <div key={tier.label}>
               <div className="flex items-center gap-4 mb-7">
                 <span
-                  className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 whitespace-nowrap"
+                  className="text-sm font-black uppercase tracking-[0.2em] text-slate-200 whitespace-nowrap"
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   {tier.label}
                 </span>
-                <div className="flex-1 h-px bg-gradient-to-r from-slate-700 to-transparent" />
+                <div className="flex-1 h-px bg-gradient-to-r from-slate-500 to-transparent" />
               </div>
 
               <div className={`grid ${tier.cols} gap-6 items-center justify-items-center`}>
@@ -150,10 +146,10 @@ export default function Sponsors() {
 
         <div className="mt-20 text-center border-t border-slate-800 pt-10">
           <p
-            className="text-[10px] uppercase tracking-[0.3em] text-slate-600 font-bold"
+            className="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-bold"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            These organizations proudly supported Idealize 2025
+            These organizations proudly support Idealize 2026
           </p>
         </div>
 
