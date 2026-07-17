@@ -8,16 +8,18 @@ import WalkingSpider from "./spiderwalk";
 const CONFIG = {
   // Use ISO 8601 format. By default, this uses the user's local timezone.
   openDate: new Date("2026-05-22T11:30:00"),
-  closeDate: new Date("2026-06-21T00:00:00"), // Updated to June 21, 2026
+  closeDate: new Date("2026-08-03T00:00:00"), // Updated to June 21, 2026
   
   labels: {
-    notOpenMsg: "Proposal submissions are not yet open. Stay tuned.",
-    closingInMsg: "Proposal submission closing in",
-    closedMsg: "Proposal submission portal has been closed",
-    buttonText: "Submit Proposal",
+    notOpenMsg: "Prototype submissions are not yet open. Stay tuned.",
+    closingInMsg: "Prototype submission closing in",
+    closedMsg: "Prototype submission portal has been closed",
+    buttonText: "Submit Prototype",
+    guidelinesButtonText: "View Guidelines Booklet",
   },
   
-  submissionUrl: "https://click.aiesec.lk/cs/idealize-2026-proposal-submission-document"
+  submissionUrl: "https://click.aiesec.lk/cs/prototype-submission-form",
+  guidelinesUrl: "https://click.aiesec.lk/cs/prototype-submission-guidelines-booklet"
 };
 
 // ==========================================
@@ -153,13 +155,21 @@ export default function Countdown() {
         {/* Call To Action (Only visible when active) */}
         {isActive && (
           <div className="text-center mt-12 md:mt-16">
-            <button
-              className="px-8 md:px-12 py-4 md:py-5 bg-primary text-white font-headline font-black uppercase tracking-widest text-base md:text-lg hover:scale-105 active:scale-95 transition-all shadow-[8px_8px_0px_0px_rgba(77,96,189,0.4)]"
-              onClick={() => window.open(CONFIG.submissionUrl, "_blank")}
-            >
-              {CONFIG.labels.buttonText}
-            </button>
-            <p className="text-slate-500 text-xs uppercase tracking-widest mt-4 font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-5 md:gap-6">
+              <button
+                className="w-full sm:w-64 h-14 md:h-16 flex items-center justify-center px-6 bg-primary text-white font-headline font-black uppercase tracking-widest text-sm md:text-base hover:scale-105 active:scale-95 transition-all shadow-[6px_6px_0px_0px_rgba(77,96,189,0.4)]"
+                onClick={() => window.open(CONFIG.submissionUrl, "_blank")}
+              >
+                {CONFIG.labels.buttonText}
+              </button>
+              <button
+                className="w-full sm:w-64 h-14 md:h-16 flex items-center justify-center px-6 bg-transparent border-2 border-primary text-primary font-headline font-black uppercase tracking-widest text-sm md:text-base hover:scale-105 active:scale-95 transition-all shadow-[6px_6px_0px_0px_rgba(100,116,139,0.25)]"
+                onClick={() => window.open(CONFIG.guidelinesUrl, "_blank")}
+              >
+                {CONFIG.labels.guidelinesButtonText}
+              </button>
+            </div>
+            <p className="text-slate-500 text-xs uppercase tracking-widest mt-5 font-bold" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
               Deadline: {CONFIG.closeDate.toDateString()} at {formatTime(CONFIG.closeDate)}
             </p>
           </div>
