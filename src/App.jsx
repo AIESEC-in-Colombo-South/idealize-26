@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState, useCallback } from "react";
 import Navbar from "./components/Navbar";
+import Leaderboard from "./components/leaderboard";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Categories from "./components/categories";
@@ -112,6 +113,7 @@ export default function App() {
 
           <section className="snap-section min-h-screen" ref={registerRef("hero")}>
             <Hero />
+            <Leaderboard/>
             <Countdown />
             <ScrollArrow onClick={() => scrollToNext("hero")} />
           </section>
