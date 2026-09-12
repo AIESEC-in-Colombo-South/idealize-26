@@ -81,6 +81,24 @@ export default function Navbar({ activeSection, scrollToSection }) {
         .register-btn:active { transform: scale(0.96); }
         .register-btn .material-symbols-outlined {
           font-size: 1rem;
+          line-height: 1;
+        }
+
+        .menu-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 2.6rem;
+          width: 2.6rem;
+          color: #ffffff;
+          flex-shrink: 0;
+        }
+        .menu-btn .material-symbols-outlined {
+          font-size: 1.5rem;
+          line-height: 1;
         }
 
         .logo-slot {
@@ -152,7 +170,7 @@ export default function Navbar({ activeSection, scrollToSection }) {
             <span className="material-symbols-outlined">shopping_cart</span>
             Merch
           </button>
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-white p-1">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="menu-btn">
             <span className="material-symbols-outlined">
               {menuOpen ? "close" : "menu"}
             </span>
