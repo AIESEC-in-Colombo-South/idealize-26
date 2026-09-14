@@ -134,7 +134,6 @@ export default function App() {
               other block, so they participate in scroll-snap, IntersectionObserver
               tracking, and the SECTIONS nav flow instead of being skipped. */}
           <section className="snap-section min-h-screen" ref={registerRef("highlights")}>
-            <Leaderboard />
             <Countdown />
             <ScrollArrow onClick={() => scrollToNext("highlights")} />
           </section>
